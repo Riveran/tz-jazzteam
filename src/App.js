@@ -3,6 +3,11 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navigaton from './components/NavBar'
 import MainContainer from './containers/MainContainer'
+import InfoContainer from './containers/InfoContainer'
+import LoginContainer from './containers/LoginContainer'
+import ProfileContainer from './containers/ProfileContainer'
+import TableContainer from './containers/TableContainer'
+import PrivateRoute from './components/PrivateRoute'
 
 class App extends Component {
   render () {
@@ -11,7 +16,11 @@ class App extends Component {
         <div>
           <Navigaton />
           <Switch>
-            <Route path='/' component={MainContainer} />
+            <Route exact path='/' component={MainContainer} />
+            <Route path='/info' component={InfoContainer} />
+            <Route path='/login' component={LoginContainer} />
+            <PrivateRoute path='/profile' component={ProfileContainer} />
+            <PrivateRoute path='/table' component={TableContainer} />
           </Switch>
         </div>
       </Router>

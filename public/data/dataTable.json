@@ -1,0 +1,16 @@
+[
+    {"category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$49.99", "stocked": true, "name": "Football", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$9.99", "stocked": true, "name": "Baseball", "country": "Balarus"},
+    {"category": "Sporting Goods", "price": "$29.99", "stocked": false, "name": "Basketball", "country": "Balarus"}
+   
+]
+  

@@ -1,14 +1,9 @@
+import infoData from './../data/infoData'
+
 const initialState = {
-  name: 'name',
-  surName: 'surname'
+  infoData: infoData
 }
 
-export default (state = initialState, { type, payload }) => {
-  switch (type) {
-    case 'asd':
-      return { ...state, ...payload }
-
-    default:
-      return state
-  }
+export default (state = initialState) => {
+  return state
 }

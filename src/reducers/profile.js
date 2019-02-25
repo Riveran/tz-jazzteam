@@ -1,14 +1,9 @@
+import profileData from './../data/profileData'
+
 const initialState = {
-  name: 'name',
-  surName: 'surname'
+  profileData: profileData
 }
 
-export default (state = initialState, { type, payload }) => {
-  switch (type) {
-    case 'asd':
-      return { ...state, ...payload }
-
-    default:
-      return state
-  }
+export default (state = initialState) => {
+  return state
 }
