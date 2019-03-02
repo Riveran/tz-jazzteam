@@ -1,14 +1,24 @@
-.test {
-  border: 1px solid red;
-}
-table {
+.table {
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-tr {
-  border: 1px solid red;
+.table-row {
+  border: 1px solid gray;
+}
+
+.table-item {
+  padding: 10px;
 }
 
 td {
-  border: 1px solid red;
+  border: 1px solid gray;
+}
+
+.table-wrapper {
+  width: 740px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

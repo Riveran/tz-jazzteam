@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import './style.css'
 
 export class index extends Component {
   static propTypes = {
@@ -20,11 +21,11 @@ export class index extends Component {
     const { showMoreInfo } = this.state
     const renderMain = this.props.main.map(
       ({ title, about, moreInfo }, index) => (
-        <div key={title + index}>
-          <h3>{title}</h3>
+        <div className='main-wrapper' key={title + index}>
+          <h3 className='main-title'>{title}</h3>
           <p>{about}</p>
-          <p onClick={this.handleClick}>
-            {showMoreInfo ? 'Close' : 'show more'}
+          <p className='page_show-more' onClick={this.handleClick}>
+            {showMoreInfo ? 'Close' : 'Show more'}
           </p>
           {showMoreInfo ? <p>{moreInfo}</p> : null}
         </div>
@@ -35,7 +36,7 @@ export class index extends Component {
   }
 
   render () {
-    return <div>{this.getBody()}</div>
+    return <div className='main_page-wrapper'>{this.getBody()}</div>
   }
 }
 

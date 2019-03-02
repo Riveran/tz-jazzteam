@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import './style.css'
 export class index extends Component {
   static propTypes = {
     profileData: PropTypes.array.isRequired
@@ -8,16 +8,12 @@ export class index extends Component {
 
   getBody = () => {
     const renderProfile = this.props.profileData.map(
-      ({ name, position, image, city, site, infoFovor }, index) => (
-        <div key={name + index}>
-          <h3>{name}</h3>
-          <p>{position}</p>
-          <img src={image} />
-          <p>{city}</p>
-          <p>
-            <a href={site}>Site</a>
-          </p>
-          <p>{infoFovor}</p>
+      ({ name, position, image, infoFovor }, index) => (
+        <div className='profile-item' key={name + index}>
+          <h3 className='profile-name'>{name}</h3>
+          <p className='profile-position'>{position}</p>
+          <img className='profile-image' src={image} />
+          <p className='profile-info'>{infoFovor}</p>
         </div>
       )
     )
@@ -25,7 +21,7 @@ export class index extends Component {
   }
 
   render () {
-    return <div>{this.getBody()}</div>
+    return <div className='profile-wrapper'>{this.getBody()}</div>
   }
 }
 

@@ -1,0 +1,40 @@
+.navigation-wrapper {
+  width: 150px;
+  height: 200px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.navigation-items {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation_item {
+  list-style-type: none;
+  width: 149px;
+  height: 25px;
+  text-align: center;
+}
+
+.navigation_item:hover {
+  background: #edeef0;
+}
+
+.navigation_item-link {
+  color: #4a76a8;
+  text-decoration: none;
+}
+
+.login-on {
+  color: green;
+}
+
+.login-off {
+  color: red;
+}
+
+.navigation-login {
+  text-align: center;
+}

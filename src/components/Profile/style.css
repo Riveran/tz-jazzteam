@@ -1,0 +1,19 @@
+.profile-wrapper {
+  width: 740px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image {
+  float: left;
+  margin-right: 10px;
+}
+
+.profile-item {
+  margin: 20px;
+}
+
+.profile-info {
+  margin-left: 10px;
+}

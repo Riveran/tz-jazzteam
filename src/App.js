@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Navigaton from './components/NavBar'
+import NavContainer from './containers/NavBarContainer'
 import MainContainer from './containers/MainContainer'
 import InfoContainer from './containers/InfoContainer'
 import LoginContainer from './containers/LoginContainer'
@@ -13,8 +13,8 @@ class App extends Component {
   render () {
     return (
       <Router>
-        <div>
-          <Navigaton />
+        <div className='app-wrapper'>
+          <NavContainer />
           <Switch>
             <Route exact path='/' component={MainContainer} />
             <Route path='/info' component={InfoContainer} />

@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import './style.css'
 
 export class index extends Component {
   static propTypes = {
     getLogin: PropTypes.func.isRequired,
-    login: PropTypes.object.isRequired
+    login: PropTypes.object.isRequired,
+    logOut: PropTypes.func.isRequired
   }
 
   state = {
@@ -19,38 +21,67 @@ export class index extends Component {
     })
   }
 
+  loginOut = e => {
+    this.props.logOut()
+    this.setState({
+      username: '',
+      password: ''
+    })
+  }
+
   handleClick = e => {
     e.preventDefault()
     const { username, password } = this.state
     this.props.getLogin(username, password)
+    if (this.props.login.username) {
+      this.props.history.push('/')
+    }
   }
 
   render () {
-    if (this.props.login.username) return <button>Log out</button>
+    if (this.props.login.username) {
+      return (
+        <div className='login-wrapper'>
+          <form className='form-wrapper'>
+            <div className='form-item'>
+              <button className='form-btn_out' onClick={this.loginOut}>
+                Login out
+              </button>
+            </div>
+          </form>
+        </div>
+      )
+    }
     return (
-      <div>
-        <form>
-          <div>
-            <label>Name:</label>
+      <div className='login-wrapper'>
+        <form className='form-wrapper'>
+          <div className='form-item'>
+            <label>Login</label>
             <input
+              className='form-item_input'
               id='username'
               type='text'
               value={this.state.username}
               onChange={this.handleChange}
             />
           </div>
-          <div>
-            <label>Password:</label>
+          <div className='form-item'>
+            <label>Password</label>
             <input
+              className='form-item_input'
               id='password'
               type='text'
               value={this.state.password}
               onChange={this.handleChange}
             />
           </div>
-          <button onClick={this.handleClick}>Submit</button>
+          <button className='form-btn' onClick={this.handleClick}>
+            Submit
+          </button>
+          <span className='form-error'>
+            {this.props.login.errorMsg ? this.props.login.errorMsg : null}
+          </span>
         </form>
-        {this.props.login.errorMsg ? this.props.login.errorMsg : null}
       </div>
     )
   }

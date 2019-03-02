@@ -18,11 +18,11 @@ export class index extends Component {
     const tableTemplate = data.map(
       ({ category, price, name, country }, index) => {
         return (
-          <tr key={name + index}>
-            <td>{category}</td>
-            <td>{price}</td>
-            <td>{name}</td>
-            <td>{country}</td>
+          <tr className='table-row' key={name + index}>
+            <td className='table-item'>{category}</td>
+            <td className='table-item'>{price}</td>
+            <td className='table-item'>{name}</td>
+            <td className='table-item'>{country}</td>
           </tr>
         )
       }
@@ -33,10 +33,10 @@ export class index extends Component {
 
   render () {
     return (
-      <div>
-        <table className='test'>
+      <div className='table-wrapper'>
+        <table className='table'>
           <thead>
-            <tr>
+            <tr className='table-row'>
               <th>Категория</th>
               <th>Цена</th>
               <th>Имя</th>

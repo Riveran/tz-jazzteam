@@ -1,4 +1,4 @@
-import { LOGIN_CONNECT, LOGIN_ERROR } from './../constants/index'
+import { LOGIN_CONNECT, LOGIN_ERROR, LOG_OUT } from './../constants/index'
 
 export const getLogin = (username, passsword) => {
   if (username.toLowerCase() !== 'admin' || passsword !== '12345678') {
@@ -13,3 +13,7 @@ export const getLogin = (username, passsword) => {
     }
   }
 }
+
+export const logOut = () => ({
+  type: LOG_OUT
+})

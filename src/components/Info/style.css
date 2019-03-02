@@ -1,0 +1,22 @@
+.info-wrapper {
+  width: 740px;
+}
+
+.info_item-wrapper {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.info-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 50px;
+}
+
+.info-text {
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}

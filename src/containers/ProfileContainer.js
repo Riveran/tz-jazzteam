@@ -9,7 +9,6 @@ export class ProfileContainer extends Component {
   }
 
   render () {
-    console.log(this.props.profileData)
     return <Profile profileData={this.props.profileData} />
   }
 }
