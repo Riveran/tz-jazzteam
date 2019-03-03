@@ -14,15 +14,45 @@ export class index extends Component {
 
   getTable = () => {
     const { data } = this.props
-    if (data.length < 2) return <div>loading</div>
     const tableTemplate = data.map(
-      ({ category, price, name, country }, index) => {
+      ({ category, price, name, country, location }, index) => {
         return (
           <tr className='table-row' key={name + index}>
-            <td className='table-item'>{category}</td>
-            <td className='table-item'>{price}</td>
-            <td className='table-item'>{name}</td>
-            <td className='table-item'>{country}</td>
+            <td
+              suppressContentEditableWarning='true'
+              contentEditable='true'
+              className='table-item_category'
+            >
+              {category}
+            </td>
+            <td
+              suppressContentEditableWarning='true'
+              contentEditable='true'
+              className='table-item'
+            >
+              {price}
+            </td>
+            <td
+              suppressContentEditableWarning='true'
+              contentEditable='true'
+              className='table-item'
+            >
+              {name}
+            </td>
+            <td
+              suppressContentEditableWarning='true'
+              contentEditable='true'
+              className='table-item'
+            >
+              {country}
+            </td>
+            <td
+              suppressContentEditableWarning='true'
+              contentEditable='true'
+              className='table-item'
+            >
+              {location}
+            </td>
           </tr>
         )
       }
@@ -32,19 +62,27 @@ export class index extends Component {
   }
 
   render () {
+    const { data } = this.props
+    if (!data.length) {
+      return <div className='table-wrapper'>loading...</div>
+    }
+
     return (
       <div className='table-wrapper'>
         <table className='table'>
-          <thead>
+          <thead className='table-head'>
             <tr className='table-row'>
-              <th>Категория</th>
-              <th>Цена</th>
-              <th>Имя</th>
-              <th>Страна</th>
+              <th className='table-head_item'>Категория</th>
+              <th className='table-head_item'>Цена</th>
+              <th className='table-head_item'>Имя</th>
+              <th className='table-head_item'>Страна</th>
+              <th className='table-head_item'>Место</th>
             </tr>
           </thead>
           <tbody>{this.getTable()}</tbody>
         </table>
+        <div>Количество товара: {this.props.data.length}</div>
+        <div>Общее количество ячеек: {this.props.data.length * 5}</div>
       </div>
     )
   }

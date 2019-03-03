@@ -1,6 +1,7 @@
 export const LOGIN_CONNECT = 'LOGIN_CONNECT'
 export const LOGIN_ERROR = 'LOGIN_ERROR'
-export const GET_TABLE_URL = 'https://api.myjson.com/bins/iu1b2'
+export const GET_TABLE_URL = 'https://api.myjson.com/bins/bwsba'
 export const GET_DATA = 'GET_DATA'
 export const LOG_OUT = 'LOG_OUT'
 export const GET_AIN_INFO = 'GET_AIN_INFO'
+export const REROUTE = 'REROUTE'

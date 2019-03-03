@@ -29,13 +29,11 @@ export class index extends Component {
     })
   }
 
-  handleClick = e => {
+  handleClick = async e => {
     e.preventDefault()
     const { username, password } = this.state
-    this.props.getLogin(username, password)
-    if (this.props.login.username) {
-      this.props.history.push('/')
-    }
+    await this.props.getLogin(username, password)
+    if (this.props.login.username) this.props.history.push('/profile')
   }
 
   render () {

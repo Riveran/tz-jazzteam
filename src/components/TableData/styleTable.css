@@ -2,6 +2,10 @@
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  overflow: scroll;
+  width: 380px;
+  height: 300px;
 }
 
 .table-row {
@@ -10,6 +14,26 @@
 
 .table-item {
   padding: 10px;
+}
+
+.table-item:hover {
+  background: gold;
+}
+
+.table-item_category {
+  position: sticky;
+  left: 0;
+  background: white;
+  padding: 30px;
+}
+
+.table-head {
+}
+
+.table-head_item {
+  position: sticky;
+  top: 0;
+  background: white;
 }
 
 td {

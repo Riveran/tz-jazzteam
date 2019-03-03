@@ -36,7 +36,7 @@ export default class index extends Component {
         <p className='navigation-login'>
           Login:{' '}
           {this.props.login ? (
-            <span className='login-on'>Online</span>
+            <span className='login-on'>Admin</span>
           ) : (
             <span className='login-off'>Offline</span>
           )}
